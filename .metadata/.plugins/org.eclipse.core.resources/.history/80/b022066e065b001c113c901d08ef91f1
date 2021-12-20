@@ -1,0 +1,18 @@
+
+public class ReverseWord {
+	int it =0;
+	String rverse(String data) {
+	
+		if(data.length()==1) return data;
+		
+		System.err.println(it++);
+		return data.substring(0, data.length()-1);
+	}
+	
+	
+	public static void main(String[] args) {
+	
+		ReverseWord rv = new ReverseWord();
+		System.out.println(rv.rverse("project"));
+	}
+}

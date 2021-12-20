@@ -1,0 +1,66 @@
+package prog9_4;
+
+
+import java.io.File;
+import java.io.FileNotFoundException;
+import java.util.Scanner;
+import java.util.Stack;
+
+public class SymbolBalancer {
+	String ODD_DELIMITER = ""+(char)0;
+	String filename;
+	String text;
+	char[] left;
+	char[] right;
+	NodeQueue queue;
+	public SymbolBalancer(String filename) {
+		this.filename = filename;
+		queue = new NodeQueue();
+		readFile();
+	}
+	public void setText(String text) {
+		this.text = text;
+	}
+	
+	boolean symbolsBalanced(String delimiters){
+		
+		for(int i = 0; i < text.length(); i++) {
+			char ch = text.charAt(i);
+			
+			if(delimiters.indexOf(ch) % 2 ==0) {
+				
+			}
+			
+			if(delimiters.indexOf(ch) % 2 ==1) {
+				if(queue.isEmpty()) return false;
+			}
+			
+		}
+		
+		
+		return false;
+		
+	}
+	
+	public static void main(String[] args) {
+		SymbolBalancer sb = new SymbolBalancer("prog9_4\\Employee.java");
+		System.out.println(sb.symbolsBalanced("[]{}()"));
+	}
+	void readFile() {
+		String prefix = System.getProperty("user.dir") + "\\src\\";
+		try {
+			Scanner sc = new Scanner(new File(prefix + filename));
+			sc.useDelimiter(ODD_DELIMITER);
+			text = sc.next();
+//			System.out.println(text);
+			sc.close();
+		}
+		catch(FileNotFoundException ex) {
+			System.err.println("File Not Found Exception " + ex.getMessage());
+		}
+	}
+	
+}
+
+
+

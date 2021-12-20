@@ -1,0 +1,4 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<session version="1.0">
+<refactoring comment="Move package &apos;paper_pencil&apos; to &apos;FPP Lab8/src&apos;&#x0D;&#x0A;- Original project: &apos;FPP Lab7&apos;&#x0D;&#x0A;- Destination element: &apos;FPP Lab8/src&apos;&#x0D;&#x0A;- Original element: &apos;FPP Lab7/src/paper_pencil&apos;&#x0D;&#x0A;- Update references to refactored element" description="Move package" destination="=FPP Lab8/src" element1="/src&lt;paper_pencil" flags="589830" fragments="1" id="org.eclipse.jdt.ui.move" policy="org.eclipse.jdt.ui.movePackages" stamp="1639432599993" version="1.0"/>
+</session>

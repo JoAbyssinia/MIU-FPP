@@ -1,0 +1,28 @@
+package ListWIthObject;
+
+public class Queue {
+
+	
+	DoublyLinkedList head;
+	
+	
+	public Queue() {
+		head = new DoublyLinkedList();
+	}
+	
+	public void enqueue(Student st) {
+		head.addLast(st);
+	}
+	
+	public Student peek() {
+		return head.get(0);
+	}
+	
+	public Student dequeue() {
+		Student temp = peek();
+		head.delete(0);
+		return temp;
+	}
+	
+	
+}

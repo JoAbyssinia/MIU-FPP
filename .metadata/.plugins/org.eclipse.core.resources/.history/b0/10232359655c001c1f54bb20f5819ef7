@@ -1,0 +1,35 @@
+package prog7_2;
+
+public class MinSort {
+
+	int i=0;
+	public String sort(String n) {
+		if(n ==null || n.length()==0) return "";
+		
+		if(n.length()==1) return n;
+		
+		char[] charArr = n.toCharArray();
+		
+		int minPos=0;
+		char ch = charArr[i];
+		
+			if(charArr[i+1] < ch){
+				char temp = charArr[i+1];
+				charArr[i+1] = ch;
+				ch=temp;
+			}
+//		charArr[minPos] = charArr[0];
+//		charArr[0] = ch;
+		n = new String(charArr);
+//		i++;
+		return ch + sort(n.substring(i++));
+		
+		
+		
+	}
+	public static void main(String[] args) {
+		MinSort ms = new MinSort();
+		String result = ms.sort("zwxuabfkafutbbbb");
+		System.out.println(result);
+	}
+}

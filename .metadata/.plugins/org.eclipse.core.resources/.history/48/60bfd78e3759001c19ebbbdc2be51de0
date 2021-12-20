@@ -1,0 +1,38 @@
+package prog9_2;
+
+public class DelimiterStack {
+
+	Node head;
+	int size =0;
+	public void push(char input) {
+		Node n = new Node(input);
+		if(head == null) {
+			head = n;
+			return;
+		}
+		head.next = n;
+		head = n;
+		size++;
+	}
+	
+	public char peak() {
+		if(head == null) return 0;
+		return head.value;
+	}
+	
+	public char pop() {
+		if(head == null) return 0;
+		
+		char temp = peak();
+		head = head.next;
+		return temp;
+		
+		size--;
+	}
+	
+	private void isEmpty() {
+		
+	}
+	
+	
+}

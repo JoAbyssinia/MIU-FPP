@@ -1,0 +1,43 @@
+package List;
+
+public class Doublylikendlist {
+
+	int size;
+	Node head;
+	Node tail;
+	
+	public Doublylikendlist() {
+		head=null;
+		tail = null;
+		size=0;
+	}
+	
+	public void addFirst(int value) {
+		Node n = new Node(value);
+		if(head==null) {
+			head.next = n;
+			size++;
+			return;
+		}
+		n.next = head.next;
+		head.next = n;	
+	}
+	
+	
+	
+	
+	
+	
+	@Override
+	public String toString() {
+		String re = "";
+		Node temp = head.next;
+		while(temp.next != null) {	
+			
+			re += temp.value +",";
+			
+			temp = temp.next;
+		}
+		return re;
+	}
+}

@@ -1,0 +1,67 @@
+package ListWIthObject;
+
+import java.util.Iterator;
+
+public class DoublyLinkedList implements Iterable<Student> {
+
+	int size;
+	Node head;
+	Node tail;
+	
+	public DoublyLinkedList() {
+		head = new Node(null);
+		tail = new Node(null);
+		size=0;
+	}
+	
+	public void addFirst(Student stu) {
+		
+		Node n = new Node(stu);
+		n.next = head.next;
+		n.privous = head;
+		head.next.privous = n;
+		head.next = n;
+		size++;
+	}
+	
+	public Student get(int pos) {
+		int i=0;
+		Node temp = head.next;
+		while(temp != null) {
+			
+			if(pos == i) {
+				return temp.student;
+			}
+			i++;
+			temp = temp.next;
+		}
+		
+		return null;
+	}
+	
+	@Override
+	public String toString() {
+		
+		return super.toString();
+	}
+
+	@Override
+	public Iterator<Student> iterator() {
+		
+		return new Iterator<Student>() {
+			int pos = 0;
+			@Override
+			public Student next() {
+				
+				return get(pos++);
+			}
+			
+			@Override
+			public boolean hasNext() {
+				
+				return pos < size;
+			}
+		};
+	}
+	
+}

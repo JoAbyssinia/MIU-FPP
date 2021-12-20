@@ -1,0 +1,28 @@
+
+public class ReverseWord {
+	int it =0;
+	String rverse(String data) {
+	
+		if(data.length()==1) return data;
+		
+		return  rverse(data.substring(1)) + data.charAt(0);
+	}
+	
+	
+	int pow(int x) {
+		if(x==1) return x;
+		int result = pow(x-1);
+		System.out.println(x +" * "+ result);
+		return x * result;
+	}
+	
+	public static void main(String[] args) {
+	
+		ReverseWord rv = new ReverseWord();
+		System.out.println(rv.rverse("project"));
+		
+		System.out.println(rv.pow(4));
+		
+		System.out.println("john".substring(0,0));
+	}
+}

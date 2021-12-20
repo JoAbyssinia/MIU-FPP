@@ -1,0 +1,33 @@
+package prog11_1;
+
+import java.util.HashMap;
+
+public class Employee {
+	String firstName;
+	String lastName;
+	HashMap salaryRecord;
+	
+	public Employee() {
+		salaryRecord = new HashMap<String,double>();
+	}
+	
+	public String getFirstName() {
+		return firstName;
+	}
+	public void setFirstName(String firstName) {
+		this.firstName = firstName;
+	}
+	public String getLastName() {
+		return lastName;
+	}
+	public void setLastName(String lastName) {
+		this.lastName = lastName;
+	}
+	
+	public void addEntry(String data, double paycheckAmount) {
+		salaryRecord.
+	}
+	
+	
+	
+}

@@ -1,0 +1,12 @@
+package List;
+
+public class MainSilgle {
+
+	public static void main(String[] args) {
+		LinkedList list = new LinkedList();
+		
+		list.addFirst(1);
+		
+		System.out.println(list.size());
+	}
+}

@@ -1,0 +1,11 @@
+package classExerciess;
+
+public class Main {
+
+	public static void main(String[] args) {
+			
+		Student s1 = new Student("john kass",123);
+		
+		System.out.println(s1.hashCode());
+	}
+}

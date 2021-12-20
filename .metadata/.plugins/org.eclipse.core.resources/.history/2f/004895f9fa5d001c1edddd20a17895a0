@@ -1,0 +1,24 @@
+package ListWIthObject;
+
+public class Main {
+
+	public static void main(String[] args) {
+		Student s1 = new Student("yohannes Kassa", 12);
+		Student s2 = new Student("Amanuel Kassa", 22);
+		Student s3 = new Student("yohannes Asheber", 25);
+		Student s4 = new Student("Genet tefer", 45);
+
+		DoublyLinkedList list = new DoublyLinkedList();
+		
+		list.addFirst(s1);
+		list.addFirst(s2);
+		list.addFirst(s3);
+		list.addLast(s4);
+		
+		
+		for (Student student : list) {
+		
+			System.out.println(student);
+		}
+	}
+}

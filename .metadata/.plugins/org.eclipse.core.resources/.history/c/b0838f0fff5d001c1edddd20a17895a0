@@ -1,0 +1,26 @@
+package ListWIthObject;
+
+
+public class Stack {
+
+	int size;
+	DoublyLinkedList head;
+	
+	public Stack(){
+		head = new DoublyLinkedList();	
+	}
+	
+	public void put(Student stu) {
+		head.addFirst(stu);
+	}
+	
+	public Student peak() {
+		return head.get(0);
+	}
+	
+	public Student pop() {
+		Student temp = peak();
+		head.delete(0);
+		return temp;
+	}	
+}

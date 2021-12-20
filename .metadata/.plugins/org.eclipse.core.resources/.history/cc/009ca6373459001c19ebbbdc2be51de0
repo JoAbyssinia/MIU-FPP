@@ -1,0 +1,17 @@
+package prog9_2;
+
+public class DelimiterStack {
+
+	Node head;
+		
+	void push(char input) {
+		Node n = new Node(input);
+		if(head == null) {
+			head = n;
+			return;
+		}
+		head.next = n;
+		head = n;		
+	}
+	
+}

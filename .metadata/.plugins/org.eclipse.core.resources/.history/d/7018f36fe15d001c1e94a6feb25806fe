@@ -1,0 +1,16 @@
+package List;
+
+public class MainD {
+
+	public static void main(String[] args) {
+		
+		Doublylikendlist db = new Doublylikendlist();
+		
+		db.addFirst(1);
+		db.addFirst(2);
+		db.addFirst(3);
+		
+		System.out.println(db);
+		
+	}
+}

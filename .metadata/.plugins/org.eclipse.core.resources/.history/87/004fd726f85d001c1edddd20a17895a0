@@ -1,0 +1,26 @@
+package ListWIthObject;
+
+public class DoublyLinkedList {
+
+	int size;
+	Node head;
+	Node tail;
+	
+	public DoublyLinkedList() {
+		head = new Node(null);
+		tail = new Node(null);
+		size=0;
+	}
+	
+	public void addFirst(Student stu) {
+		
+		Node n = new Node(stu);
+		n.next = head.next;
+		n.privous = head;
+		head.next.privous = n;
+		head.next = n;
+		size++;
+
+	}
+	
+}

@@ -1,0 +1,16 @@
+package ListWIthObject;
+
+import List.Doublylikendlist;
+
+public class Stack {
+
+	int size;
+	Doublylikendlist head;
+	
+	Stack(){
+		head = Doublylikendlist();
+		
+	}
+	
+	
+}

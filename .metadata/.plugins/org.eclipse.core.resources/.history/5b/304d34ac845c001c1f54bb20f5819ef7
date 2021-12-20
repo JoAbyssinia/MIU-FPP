@@ -1,0 +1,6 @@
+package closedcurve.good.exeptions;
+
+public class IllegalTriangleException extends Exception {
+	
+	
+}

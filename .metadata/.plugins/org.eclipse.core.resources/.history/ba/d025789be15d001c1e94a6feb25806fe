@@ -1,0 +1,16 @@
+package List;
+
+public class MainD {
+
+	public static void main(String[] args) {
+		
+		Doublylikendlist db = new Doublylikendlist();
+		
+		db.addFirst("sdf");
+		db.addFirst("Sdf");
+		db.addFirst("sdfs");
+		
+		System.out.println(db);
+		
+	}
+}

@@ -1,0 +1,15 @@
+package List;
+
+public class MainSilgle {
+
+	public static void main(String[] args) {
+		LinkedList list = new LinkedList();
+		
+		list.addFirst(1);
+		list.addLast(2);
+//		list.removeByValue(2);
+		System.out.println(list.size());
+		System.out.println(list);
+		
+	}
+}
